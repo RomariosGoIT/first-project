@@ -28,8 +28,7 @@ const App = () => {
   const [expenseData, setExpenseData] = useState(expenses);
 
   const getExpenseData = expenseData => {
-    setExpenseData(lastState => [...lastState, expenseData]);
-    console.log(expenseData);
+    setExpenseData(prevExpenses => [expenseData, ...prevExpenses]);
   };
 
   return (
