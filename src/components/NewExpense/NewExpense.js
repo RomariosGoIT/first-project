@@ -3,10 +3,18 @@ import '../css/NewExpense.css';
 import './ExpenseForm';
 import ExpenseForm from './ExpenseForm';
 
-const NewExpense = () => {
+const NewExpense = ({ onGetExpenseData }) => {
+  const savedExpanseData = enteredExpanseData => {
+    const expanseData = {
+      ...enteredExpanseData,
+      id: Math.random().toString(),
+    };
+    onGetExpenseData(expanseData);
+  };
+
   return (
     <div className="new-expense">
-      <ExpenseForm />
+      <ExpenseForm onSaveExpanseData={savedExpanseData} />
     </div>
   );
 };

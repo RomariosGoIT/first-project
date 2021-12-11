@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Expense from './components/Expense';
 import NewExpense from './components/NewExpense/NewExpense';
 
@@ -25,10 +25,17 @@ const App = () => {
     },
   ];
 
+  const [expenseData, setExpenseData] = useState(expenses);
+
+  const getExpenseData = expenseData => {
+    setExpenseData(lastState => [...lastState, expenseData]);
+    console.log(expenseData);
+  };
+
   return (
     <div>
-      <NewExpense />
-      <Expense items={expenses} />
+      <NewExpense onGetExpenseData={getExpenseData} />
+      <Expense items={expenseData} />
     </div>
   );
 };
