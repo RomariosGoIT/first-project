@@ -13,8 +13,7 @@
   display: inline-block;
 }
 
-.new-expense button,
-.cancel__btn {
+.new-expense button {
   font: inherit;
   cursor: pointer;
   padding: 1rem 2rem;
@@ -26,9 +25,7 @@
 }
 
 .new-expense button:hover,
-.new-expense button:active,
-.new-expense .cancel__btn:hover,
-.new-expense .cancel__btn:active {
+.new-expense button:active {
   background-color: #510674;
   border-color: #510674;
 }

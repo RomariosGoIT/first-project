@@ -55,9 +55,9 @@ const ExpenseForm = ({ onSaveExpanseData, onCancelClick }) => {
         </div>
       </div>
       <div className="new-expense__actions">
-        <div className="cancel__btn" onClick={onCancelClick}>
+        <button type="button" onClick={onCancelClick}>
           Cancel
-        </div>
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
